@@ -33,20 +33,12 @@
       TOUCH_PANNER_DISABLED: false
     };
 
-  function onVRViewReady(e) {
-    vrView.addHotspot('clickspot', {
-      pitch: 0, // 上方向の位置。-90,90の範囲で指定。
-      yaw: 0, // 横方向の位置。-180,180の範囲で指定。
-      radius: 0.05, // 円の半径。
-      distance: 1 // カメラからの距離。
-    });
-  }
-
-  function onVRViewClick(e) {
-    if (e.id == 'clickspot') {
-      console.log('Hotspotをclickしました！')
-    }
-  }
+  vrView.addHotspot('', {
+    pitch: 0, // 上方向の位置。-90,90の範囲で指定。
+    yaw: 0, // 横方向の位置。-180,180の範囲で指定。
+    radius: 0.05, // 円の半径。
+    distance: 1 // カメラからの距離。
+  });
     
   </script>
 
