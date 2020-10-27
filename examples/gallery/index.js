@@ -17,8 +17,8 @@ var vrView;
 // All the scenes for the experience
 var scenes = {
   フェニックス広場: {
-    image: '100_0011.jpg',
-    preview: '100_0011.jpg'
+    image: '100_0011.JPG',
+    preview: '100_0011.JPG'
   },
   christTheRedeemer: {
     image: 'christ-redeemer.jpg',
