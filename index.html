@@ -32,14 +32,6 @@
       BUFFER_SCALE: 0.5,
       TOUCH_PANNER_DISABLED: false
     };
-    
-    function onLoad() {
-    vrView = new VRView.Player('#vrview', {
-      image: '../img/tyopress.jpg',
-      width: '100%',
-      height: '100%',
-      is_autopan_off: true,
-    });
 
     vrView.on('ready', onVRViewReady);
     vrView.on('click', onVRViewClick);
