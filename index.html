@@ -33,10 +33,6 @@
       TOUCH_PANNER_DISABLED: false
     };
 
-    vrView.on('ready', onVRViewReady);
-    vrView.on('click', onVRViewClick);
-  }
-
   function onVRViewReady(e) {
     vrView.addHotspot('clickspot', {
       pitch: 0, // 上方向の位置。-90,90の範囲で指定。
