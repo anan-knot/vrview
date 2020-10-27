@@ -16,9 +16,9 @@ var vrView;
 
 // All the scenes for the experience
 var scenes = {
-  petra: {
-    image: 'petra.jpg',
-    preview: 'petra-preview.jpg'
+  フェニックス広場: {
+    image: '100_0011.jpg',
+    preview: '100_0011.jpg'
   },
   christTheRedeemer: {
     image: 'christ-redeemer.jpg',
@@ -89,7 +89,7 @@ function onVRViewReady(e) {
     });
   }
 
-  loadScene('petra');
+  loadScene('フェニックス広場');
 }
 
 function onModeChange(e) {
