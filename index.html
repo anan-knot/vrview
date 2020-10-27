@@ -32,6 +32,36 @@
       BUFFER_SCALE: 0.5,
       TOUCH_PANNER_DISABLED: false
     };
+    
+    function onLoad() {
+    vrView = new VRView.Player('#vrview', {
+      image: '../img/tyopress.jpg',
+      width: '100%',
+      height: '100%',
+      is_autopan_off: true,
+    });
+
+    vrView.on('ready', onVRViewReady);
+    vrView.on('click', onVRViewClick);
+  }
+
+  function onVRViewReady(e) {
+    vrView.addHotspot('clickspot', {
+      pitch: 0, // 上方向の位置。-90,90の範囲で指定。
+      yaw: 0, // 横方向の位置。-180,180の範囲で指定。
+      radius: 0.05, // 円の半径。
+      distance: 1 // カメラからの距離。
+    });
+  }
+
+  function onVRViewClick(e) {
+    if (e.id == 'clickspot') {
+      console.log('Hotspotをclickしました！')
+    }
+  }
+
+  window.addEventListener('load', onLoad);
+    
   </script>
 
   <script src="build/three.js"></script>
