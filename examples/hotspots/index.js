@@ -21,10 +21,10 @@ var scenes = {
     preview: '100_0004.JPG',
     hotspots: {
       whaleRight: {
-        pitch: 0,
-        yaw: 110,
-        radius: 0.05,
-        distance: 1
+        pitch: -8.3,
+        yaw: 1.1,
+        radius: 0.2,
+        distance: 2
       },
       whaleLeft: {
         pitch: 0,
