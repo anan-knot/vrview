@@ -123,6 +123,14 @@ function onLoad() {
     is_autopan_off: true
   });
 
+  function onLoad() {
+  vrView = new VRView.Player('#vrview', {
+    image: 'blank.png',
+    preview: 'blank.png',
+    is_stereo: false,
+    is_autopan_off: true
+  });
+  
   vrView.on('ready', onVRViewReady);
   vrView.on('modechange', onModeChange);
   vrView.on('click', onHotspotClick);
@@ -191,7 +199,6 @@ function loadScene(id) {
     preview: scenes[id].preview,
     is_autopan_off: true
   });
-
   // Unhighlight carousel items
   var carouselLinks = document.querySelectorAll('ul.carousel li a');
   for (var i = 0; i < carouselLinks.length; i++) {
@@ -202,10 +209,6 @@ function loadScene(id) {
   document.querySelector('ul.carousel li a[href="#' + id + '"]')
       .classList.add('current');
 }
-
-
-
-
 
 function onVRViewError(e) {
   console.log('Error! %s', e.message);
