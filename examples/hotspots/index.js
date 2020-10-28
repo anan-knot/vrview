@@ -17,25 +17,20 @@ var vrView2;
 
 // All the scenes for the experience
 var scenes = {
-  classroom: {
+  フェニックス広場: {
     image: '0E1EE5CC-1102-4FE4-8D93-A86B4AA17D9B.jpeg',
-    preview: '0E1EE5CC-1102-4FE4-8D93-A86B4AA17D9B.jpeg'
   },
   christTheRedeemer: {
     image: 'christ-redeemer.jpg',
-    preview: 'christ-redeemer-preview.jpg'
   },
   machuPicchu: {
     image: 'machu-picchu.jpg',
-    preview: 'machu-picchu-preview.jpg'
   },
   chichenItza: {
     image: 'chichen-itza.jpg',
-    preview: 'chichen-itza-preview.jpg'
   },
   tajMahal: {
     image: 'taj-mahal.jpg',
-    preview: 'taj-mahal-preview.jpg'
   },
 };
 
@@ -46,9 +41,9 @@ var vrView;
 
 // All the scenes for the experience
 var scenes = {
-  classroom: {
-    image: '100_0004.JPG',
-    preview: '100_0004.JPG',
+  フェニックス広場: {
+    image: '100_0011.JPG',
+    preview: '100_0011.JPG',
     hotspots: {
       whaleRight: {
         pitch: -8.3,
