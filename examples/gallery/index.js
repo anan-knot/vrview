@@ -117,57 +117,7 @@ var scenes = {
 
 
 
-function onLoad() {
-  vrView = new VRView.Player('#vrview', {
-    image: 'blank.png',
-    preview: 'blank.png',
-    is_stereo: false,
-    is_autopan_off: true
-  });
 
-  vrView.on('click', onHotspotClick);
-
-}
-
-function onVRViewReady(e) {
-  console.log('onVRViewReady');
-  loadScene('classroom');
-}
-
-function onHotspotClick(e) {
-  vrView.getPosition()
-  console.log('onHotspotClick', e.id);
-  if (e.id) {
-    loadScene(e.id);
-  }
-}
-
-function loadScene(id) {
-  console.log('loadScene', id);
-
-  // Set the image
-  vrView.setContent({
-    image: scenes[id].image,
-    preview: scenes[id].preview,
-    is_stereo: false,
-    is_autopan_off: true
-  });
-
-  // Add all the hotspots for the scene
-  var newScene = scenes[id];
-  var sceneHotspots = Object.keys(newScene.hotspots);
-  for (var i = 0; i < sceneHotspots.length; i++) {
-    var hotspotKey = sceneHotspots[i];
-    var hotspot = newScene.hotspots[hotspotKey];
-
-    vrView.addHotspot(hotspotKey, {
-      pitch: hotspot.pitch,
-      yaw: hotspot.yaw,
-      radius: hotspot.radius,
-      distance: hotspot.distance
-    });
-  }
-}
 
 
 
