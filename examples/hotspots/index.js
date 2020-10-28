@@ -25,98 +25,26 @@ var scenes = {
     image: '100_0011.JPG',
     preview: '100_0011.JPG',
     hotspots: {
-      whaleRight: {
-        pitch: -8.3,
-        yaw: 1.1,
-        radius: 0.2,
+      教室: {
+        pitch: 8.3,
+        yaw: -51.0,
+        radius: 0.1,
         distance: 2
-      },
-      whaleLeft: {
-        pitch: 0,
-        yaw: 150,
-        radius: 0.05,
-        distance: 1
-      },
-      walrus: {
-        pitch: 0,
-        yaw: 170,
-        radius: 0.05,
-        distance: 1
       }
     }
   },
-  whaleLeft: {
-    image: 'whale-left.jpg',
-    preview: 'whale-left-preview.jpg',
+  教室: {
+    image: '100_0004.JPG',
+    preview: '100_0004.JPG',
     hotspots: {
-      whaleRight: {
-        pitch: 0,
-        yaw: 125,
-        radius: 0.05,
-        distance: 1
-      },
-      classroom: {
-        pitch: 0,
-        yaw: 110,
-        radius: 0.05,
-        distance: 1
-      },
-      walrus: {
-        pitch: 0,
-        yaw: 30,
-        radius: 0.05,
-        distance: 1
+      フェニックス広場: {
+        pitch: -0.9,
+        yaw: -45.7,
+        radius: 0.1,
+        distance: 2
       }
     }
   },
-  whaleRight: {
-    image: 'whale-right.jpg',
-    preview: 'whale-right-preview.jpg',
-    hotspots: {
-      classroom: {
-        pitch: 0,
-        yaw: 305,
-        radius: 0.05,
-        distance: 1
-      },
-      whaleLeft: {
-        pitch: 0,
-        yaw: 180,
-        radius: 0.05,
-        distance: 1
-      },
-      walrus: {
-        pitch: 0,
-        yaw: 210,
-        radius: 0.05,
-        distance: 1
-      }
-    }
-  },
-  walrus: {
-    image: 'walrus.jpg',
-    preview: 'walrus-preview.jpg',
-    hotspots: {
-      whaleLeft: {
-        pitch: 0,
-        yaw: 20,
-        radius: 0.05,
-        distance: 1
-      },
-      whaleRight: {
-        pitch: 0,
-        yaw: 340,
-        radius: 0.05,
-        distance: 1
-      },
-      classroom: {
-        pitch: 0,
-        yaw: 320,
-        radius: 0.05,
-        distance: 1
-      }
-    }
-  }
 };
 
 
