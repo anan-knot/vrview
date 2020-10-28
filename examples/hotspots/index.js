@@ -13,26 +13,6 @@
  * limitations under the License.
  */
 
-var vrView2;
-
-// All the scenes for the experience
-var scenes = {
-  フェニックス広場: {
-    image: '0E1EE5CC-1102-4FE4-8D93-A86B4AA17D9B.jpeg',
-  },
-  christTheRedeemer: {
-    image: 'christ-redeemer.jpg',
-  },
-  machuPicchu: {
-    image: 'machu-picchu.jpg',
-  },
-  chichenItza: {
-    image: 'chichen-itza.jpg',
-  },
-  tajMahal: {
-    image: 'taj-mahal.jpg',
-  },
-};
 
 
 
@@ -141,7 +121,7 @@ var scenes = {
 
 
 function onLoad() {
-  vrView = new VRView.Player('#vrview2', {
+  vrView = new VRView.Player('#vrview', {
     width: '100%',
     height: 480,
     image: 'blank.png',
