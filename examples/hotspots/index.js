@@ -248,7 +248,7 @@ function onVRViewReady(e) {
     });
   }
 
-  loadScene('classroom');
+  loadScene('フェニックス広場');
 }
 
 
