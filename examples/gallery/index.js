@@ -43,7 +43,6 @@ function onLoad() {
     width: '100%',
     height: 480,
     image: 'blank.png',
-    is_stereo: false,
     is_autopan_off: true
   });
 
