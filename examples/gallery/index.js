@@ -16,26 +16,102 @@ var vrView;
 
 // All the scenes for the experience
 var scenes = {
-  フェニックス広場: {
-    image: '100_0011.JPG',
-    preview: '100_0011.JPG'
+  classroom: {
+    image: '100_0004.JPG',
+    preview: '100_0004.JPG',
+    hotspots: {
+      whaleRight: {
+        pitch: -8.3,
+        yaw: 1.1,
+        radius: 0.2,
+        distance: 2
+      },
+      whaleLeft: {
+        pitch: 0,
+        yaw: 150,
+        radius: 0.05,
+        distance: 1
+      },
+      walrus: {
+        pitch: 0,
+        yaw: 170,
+        radius: 0.05,
+        distance: 1
+      }
+    }
   },
-  christTheRedeemer: {
-    image: 'christ-redeemer.jpg',
-    preview: 'christ-redeemer-preview.jpg'
+  whaleLeft: {
+    image: 'whale-left.jpg',
+    preview: 'whale-left-preview.jpg',
+    hotspots: {
+      whaleRight: {
+        pitch: 0,
+        yaw: 125,
+        radius: 0.05,
+        distance: 1
+      },
+      classroom: {
+        pitch: 0,
+        yaw: 110,
+        radius: 0.05,
+        distance: 1
+      },
+      walrus: {
+        pitch: 0,
+        yaw: 30,
+        radius: 0.05,
+        distance: 1
+      }
+    }
   },
-  machuPicchu: {
-    image: 'machu-picchu.jpg',
-    preview: 'machu-picchu-preview.jpg'
+  whaleRight: {
+    image: 'whale-right.jpg',
+    preview: 'whale-right-preview.jpg',
+    hotspots: {
+      classroom: {
+        pitch: 0,
+        yaw: 305,
+        radius: 0.05,
+        distance: 1
+      },
+      whaleLeft: {
+        pitch: 0,
+        yaw: 180,
+        radius: 0.05,
+        distance: 1
+      },
+      walrus: {
+        pitch: 0,
+        yaw: 210,
+        radius: 0.05,
+        distance: 1
+      }
+    }
   },
-  chichenItza: {
-    image: 'chichen-itza.jpg',
-    preview: 'chichen-itza-preview.jpg'
-  },
-  tajMahal: {
-    image: 'taj-mahal.jpg',
-    preview: 'taj-mahal-preview.jpg'
-  },
+  walrus: {
+    image: 'walrus.jpg',
+    preview: 'walrus-preview.jpg',
+    hotspots: {
+      whaleLeft: {
+        pitch: 0,
+        yaw: 20,
+        radius: 0.05,
+        distance: 1
+      },
+      whaleRight: {
+        pitch: 0,
+        yaw: 340,
+        radius: 0.05,
+        distance: 1
+      },
+      classroom: {
+        pitch: 0,
+        yaw: 320,
+        radius: 0.05,
+        distance: 1
+      }
+    }
+  }
 };
 
 function onLoad() {
@@ -49,6 +125,7 @@ function onLoad() {
 
   vrView.on('ready', onVRViewReady);
   vrView.on('modechange', onModeChange);
+  vrView.on('click', onHotspotClick);
   vrView.on('getposition', onGetPosition);
   vrView.on('error', onVRViewError);
 }
@@ -89,7 +166,7 @@ function onVRViewReady(e) {
     });
   }
 
-  loadScene('フェニックス広場');
+  loadScene('classroom');
 }
 
 function onModeChange(e) {
