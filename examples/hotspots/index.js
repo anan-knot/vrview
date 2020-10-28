@@ -18,8 +18,8 @@ var vrView2;
 // All the scenes for the experience
 var scenes = {
   classroom: {
-    image: '100_0011.JPG',
-    preview: '100_0011.JPG'
+    image: '0E1EE5CC-1102-4FE4-8D93-A86B4AA17D9B.jpeg',
+    preview: '0E1EE5CC-1102-4FE4-8D93-A86B4AA17D9B.jpeg'
   },
   christTheRedeemer: {
     image: 'christ-redeemer.jpg',
