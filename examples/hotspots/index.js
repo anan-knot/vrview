@@ -17,6 +17,7 @@
 
 
 
+
 var vrView;
 
 // All the scenes for the experience
@@ -48,8 +49,41 @@ var scenes = {
 };
 
 
+
+
+var vrView2;
+
+// All the scenes for the experience
+var scenes = {
+  フェニックス広場: {
+    image: '100_0011.JPG',
+    preview: '100_0011.JPG'
+  },
+  christTheRedeemer: {
+    image: 'christ-redeemer.jpg',
+    preview: 'christ-redeemer-preview.jpg'
+  },
+  machuPicchu: {
+    image: 'machu-picchu.jpg',
+    preview: 'machu-picchu-preview.jpg'
+  },
+  chichenItza: {
+    image: 'chichen-itza.jpg',
+    preview: 'chichen-itza-preview.jpg'
+  },
+  tajMahal: {
+    image: 'taj-mahal.jpg',
+    preview: 'taj-mahal-preview.jpg'
+  },
+};
+
+
+
+
+
+
 function onLoad() {
-  vrView = new VRView.Player('#vrview', {
+  vrView = new VRView.Player('#vrview2', {
     width: '100%',
     height: 480,
     image: 'blank.png',
