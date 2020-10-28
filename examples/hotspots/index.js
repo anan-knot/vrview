@@ -154,6 +154,19 @@ function onHotspotClick(e) {
 function loadScene(id) {
   console.log('loadScene', id);
 
+  
+  // Unhighlight carousel items
+  var carouselLinks = document.querySelectorAll('ul.carousel li a');
+  for (var i = 0; i < carouselLinks.length; i++) {
+    carouselLinks[i].classList.remove('current');
+  }
+    vrView.getPosition();
+  // Highlight current carousel item
+  document.querySelector('ul.carousel li a[href="#' + id + '"]')
+      .classList.add('current');
+
+  
+  
   // Set the image
   vrView.setContent({
     image: scenes[id].image,
@@ -177,6 +190,28 @@ function loadScene(id) {
     });
   }
 }
+
+function onVRViewReady(e) {
+  console.log('onVRViewReady');
+
+  // Create the carousel links
+  var carouselItems = document.querySelectorAll('ul.carousel li a');
+  for (var i = 0; i < carouselItems.length; i++) {
+    var item = carouselItems[i];
+    item.disabled = false;
+
+    item.addEventListener('click', function(event) {
+      event.preventDefault();
+      loadScene(event.target.parentNode.getAttribute('href').substring(1));
+    });
+  }
+
+  loadScene('classroom');
+}
+
+
+
+
 
 function onVRViewError(e) {
   console.log('Error! %s', e.message);
