@@ -17,110 +17,26 @@ var vrView;
 // All the scenes for the experience
 var scenes = {
   classroom: {
-    image: '100_0004.JPG',
-    preview: '100_0004.JPG',
-    hotspots: {
-      whaleRight: {
-        pitch: -8.3,
-        yaw: 1.1,
-        radius: 0.2,
-        distance: 2
-      },
-      whaleLeft: {
-        pitch: 0,
-        yaw: 150,
-        radius: 0.05,
-        distance: 1
-      },
-      walrus: {
-        pitch: 0,
-        yaw: 170,
-        radius: 0.05,
-        distance: 1
-      }
-    }
+    image: '100_0011.JPG',
+    preview: '100_0011.JPG'
   },
-  whaleLeft: {
-    image: 'whale-left.jpg',
-    preview: 'whale-left-preview.jpg',
-    hotspots: {
-      whaleRight: {
-        pitch: 0,
-        yaw: 125,
-        radius: 0.05,
-        distance: 1
-      },
-      classroom: {
-        pitch: 0,
-        yaw: 110,
-        radius: 0.05,
-        distance: 1
-      },
-      walrus: {
-        pitch: 0,
-        yaw: 30,
-        radius: 0.05,
-        distance: 1
-      }
-    }
+  christTheRedeemer: {
+    image: 'christ-redeemer.jpg',
+    preview: 'christ-redeemer-preview.jpg'
   },
-  whaleRight: {
-    image: 'whale-right.jpg',
-    preview: 'whale-right-preview.jpg',
-    hotspots: {
-      classroom: {
-        pitch: 0,
-        yaw: 305,
-        radius: 0.05,
-        distance: 1
-      },
-      whaleLeft: {
-        pitch: 0,
-        yaw: 180,
-        radius: 0.05,
-        distance: 1
-      },
-      walrus: {
-        pitch: 0,
-        yaw: 210,
-        radius: 0.05,
-        distance: 1
-      }
-    }
+  machuPicchu: {
+    image: 'machu-picchu.jpg',
+    preview: 'machu-picchu-preview.jpg'
   },
-  walrus: {
-    image: 'walrus.jpg',
-    preview: 'walrus-preview.jpg',
-    hotspots: {
-      whaleLeft: {
-        pitch: 0,
-        yaw: 20,
-        radius: 0.05,
-        distance: 1
-      },
-      whaleRight: {
-        pitch: 0,
-        yaw: 340,
-        radius: 0.05,
-        distance: 1
-      },
-      classroom: {
-        pitch: 0,
-        yaw: 320,
-        radius: 0.05,
-        distance: 1
-      }
-    }
-  }
+  chichenItza: {
+    image: 'chichen-itza.jpg',
+    preview: 'chichen-itza-preview.jpg'
+  },
+  tajMahal: {
+    image: 'taj-mahal.jpg',
+    preview: 'taj-mahal-preview.jpg'
+  },
 };
-
-
-
-
-
-
-
-
 
 
 
@@ -179,7 +95,7 @@ function onVRViewReady(e) {
     });
   }
 
-  loadScene('classroom');
+  loadScene('フェニックス広場');
 }
 
 function onModeChange(e) {
