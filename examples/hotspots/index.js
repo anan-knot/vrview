@@ -114,6 +114,20 @@ var scenes = {
   }
 };
 
+
+function onLoad() {
+  vrView = new VRView.Player('#vrview', {
+    width: '100%',
+    height: 480,
+    image: 'blank.png',
+    is_stereo: false,
+    is_autopan_off: true
+  });
+
+  
+  
+  }
+
 function onLoad() {
   vrView = new VRView.Player('#vrview', {
     image: 'blank.png',
