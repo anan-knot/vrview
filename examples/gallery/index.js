@@ -19,6 +19,14 @@ var scenes = {
   classroom: {
     image: '100_0011.JPG',
     preview: '100_0011.JPG'
+    hotspots: {
+      whaleRight: {
+        pitch: -8.3,
+        yaw: 1.1,
+        radius: 0.2,
+        distance: 2
+      }
+    }
   },
   christTheRedeemer: {
     image: 'christ-redeemer.jpg',
@@ -55,6 +63,7 @@ function onLoad() {
 
   vrView.on('ready', onVRViewReady);
   vrView.on('modechange', onModeChange);
+  vrView.on('click', onHotspotClick);
   vrView.on('getposition', onGetPosition);
   vrView.on('error', onVRViewError);
 }
@@ -62,6 +71,22 @@ function onLoad() {
 function loadScene(id) {
   console.log('loadScene', id);
 
+  / Add all the hotspots for the scene
+  var newScene = scenes[id];
+  var sceneHotspots = Object.keys(newScene.hotspots);
+  for (var i = 0; i < sceneHotspots.length; i++) {
+    var hotspotKey = sceneHotspots[i];
+    var hotspot = newScene.hotspots[hotspotKey];
+
+    vrView.addHotspot(hotspotKey, {
+      pitch: hotspot.pitch,
+      yaw: hotspot.yaw,
+      radius: hotspot.radius,
+      distance: hotspot.distance
+    });
+  }
+
+  
   // Set the image
   vrView.setContent({
     image: scenes[id].image,
@@ -95,9 +120,16 @@ function onVRViewReady(e) {
     });
   }
 
-  loadScene('フェニックス広場');
+  loadScene('classroom');
 }
 
+function onHotspotClick(e) {
+  vrView.getPosition()
+  console.log('onHotspotClick', e.id);
+  if (e.id) {
+    loadScene(e.id);
+  }
+}
 function onModeChange(e) {
   console.log('onModeChange', e.mode);
 }
