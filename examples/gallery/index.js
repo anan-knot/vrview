@@ -125,25 +125,13 @@ function onLoad() {
     is_autopan_off: true
   });
 
-  vrView.on('ready', onVRViewReady);
-  vrView.on('modechange', onModeChange);
   vrView.on('click', onHotspotClick);
-  vrView.on('error', onVRViewError);
-  vrView.on('getposition', onGetPosition);
+
 }
 
 function onVRViewReady(e) {
   console.log('onVRViewReady');
   loadScene('classroom');
-}
-
-function onModeChange(e) {
-  console.log('onModeChange', e.mode);
-}
-
-function onGetPosition(e) {
-  console.log(e);
-
 }
 
 function onHotspotClick(e) {
@@ -180,12 +168,6 @@ function loadScene(id) {
     });
   }
 }
-
-function onVRViewError(e) {
-  console.log('Error! %s', e.message);
-}
-
-window.addEventListener('load', onLoad);
 
 
 
