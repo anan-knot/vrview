@@ -126,13 +126,39 @@ function onLoad() {
   vrView.on('ready', onVRViewReady);
   vrView.on('modechange', onModeChange);
   vrView.on('click', onHotspotClick);
-  vrView.on('getposition', onGetPosition);
   vrView.on('error', onVRViewError);
+  vrView.on('getposition', onGetPosition);
+  
 }
+
+function onHotspotClick(e) {
+  vrView.getPosition()
+  console.log('onHotspotClick', e.id);
+  if (e.id) {
+    loadScene(e.id);
+  }
+}
+
 
 function loadScene(id) {
   console.log('loadScene', id);
 
+  // Add all the hotspots for the scene
+  var newScene = scenes[id];
+  var sceneHotspots = Object.keys(newScene.hotspots);
+  for (var i = 0; i < sceneHotspots.length; i++) {
+    var hotspotKey = sceneHotspots[i];
+    var hotspot = newScene.hotspots[hotspotKey];
+
+    vrView.addHotspot(hotspotKey, {
+      pitch: hotspot.pitch,
+      yaw: hotspot.yaw,
+      radius: hotspot.radius,
+      distance: hotspot.distance
+    });
+  }
+
+  
   // Set the image
   vrView.setContent({
     image: scenes[id].image,
