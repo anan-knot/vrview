@@ -153,7 +153,10 @@ function onLoad() {
     is_stereo: false,
     is_autopan_off: true
   });
-
+  vrView.on('ready', onVRViewReady);
+  vrView.on('modechange', onModeChange);
+  vrView.on('error', onVRViewError);
+  vrView.on('getposition', onGetPosition);
   
   
   }
