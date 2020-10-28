@@ -16,9 +16,9 @@ var vrView;
 
 // All the scenes for the experience
 var scenes = {
-  dolphins: {
-    image: 'dolphins.jpg',
-    preview: 'dolphins-preview.jpg',
+  classroom: {
+    image: '100_0004.JPG',
+    preview: '100_0004.JPG',
     hotspots: {
       whaleRight: {
         pitch: 0,
@@ -50,7 +50,7 @@ var scenes = {
         radius: 0.05,
         distance: 1
       },
-      dolphins: {
+      classroom: {
         pitch: 0,
         yaw: 110,
         radius: 0.05,
@@ -68,7 +68,7 @@ var scenes = {
     image: 'whale-right.jpg',
     preview: 'whale-right-preview.jpg',
     hotspots: {
-      dolphins: {
+      classroom: {
         pitch: 0,
         yaw: 305,
         radius: 0.05,
@@ -104,7 +104,7 @@ var scenes = {
         radius: 0.05,
         distance: 1
       },
-      dolphins: {
+      classroom: {
         pitch: 0,
         yaw: 320,
         radius: 0.05,
