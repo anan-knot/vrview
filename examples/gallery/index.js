@@ -131,6 +131,32 @@ function onLoad() {
   
 }
 
+function onVRViewReady(e) {
+  console.log('onVRViewReady');
+
+  // Create the carousel links
+  var carouselItems = document.querySelectorAll('ul.carousel li a');
+  for (var i = 0; i < carouselItems.length; i++) {
+    var item = carouselItems[i];
+    item.disabled = false;
+
+    item.addEventListener('click', function(event) {
+      event.preventDefault();
+      loadScene(event.target.parentNode.getAttribute('href').substring(1));
+    });
+  }
+
+  loadScene('classroom');
+}
+
+function onModeChange(e) {
+  console.log('onModeChange', e.mode);
+}
+
+function onGetPosition(e) {
+    console.log(e)
+}
+
 function onHotspotClick(e) {
   vrView.getPosition()
   console.log('onHotspotClick', e.id);
@@ -177,34 +203,14 @@ function loadScene(id) {
       .classList.add('current');
 }
 
-function onVRViewReady(e) {
-  console.log('onVRViewReady');
 
-  // Create the carousel links
-  var carouselItems = document.querySelectorAll('ul.carousel li a');
-  for (var i = 0; i < carouselItems.length; i++) {
-    var item = carouselItems[i];
-    item.disabled = false;
 
-    item.addEventListener('click', function(event) {
-      event.preventDefault();
-      loadScene(event.target.parentNode.getAttribute('href').substring(1));
-    });
-  }
 
-  loadScene('classroom');
-}
-
-function onModeChange(e) {
-  console.log('onModeChange', e.mode);
-}
 
 function onVRViewError(e) {
   console.log('Error! %s', e.message);
 }
 
-function onGetPosition(e) {
-    console.log(e)
-}
+
 
 window.addEventListener('load', onLoad);
