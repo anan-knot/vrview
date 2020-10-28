@@ -118,7 +118,7 @@ function onLoad() {
   vrView = new VRView.Player('#vrview', {
     image: 'blank.png',
     preview: 'blank.png',
-    is_stereo: true,
+    is_stereo: false,
     is_autopan_off: true
   });
 
@@ -131,7 +131,7 @@ function onLoad() {
 
 function onVRViewReady(e) {
   console.log('onVRViewReady');
-  loadScene('walrus');
+  loadScene('classroom');
 }
 
 function onModeChange(e) {
@@ -158,7 +158,7 @@ function loadScene(id) {
   vrView.setContent({
     image: scenes[id].image,
     preview: scenes[id].preview,
-    is_stereo: true,
+    is_stereo: false,
     is_autopan_off: true
   });
 
