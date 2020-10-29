@@ -23,7 +23,7 @@ var vrView;
 // All the scenes for the experience
 var scenes = {
   フェニックス広場: {
-    image: 'fenix.jpg',
+    image: 'fenix-preview.jpg',
     preview: 'fenix-preview.jpg',
     hotspots: {
       教室: {
@@ -35,7 +35,7 @@ var scenes = {
     }
   },
   教室: {
-    image: 'classroom.jpg',
+    image: 'classroom-preview.jpg',
     preview: 'classroom-preview.jpg',
     hotspots: {
       フェニックス広場: {

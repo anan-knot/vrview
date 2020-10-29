@@ -15,7 +15,21 @@
         overflow: auto;
       }
 
-      
+       /* MOBILE */
+      @media screen and (max-width: 700px) {
+        ul.carousel {
+          width: 100%;
+          justify-content: flex-start;
+        }
+
+          ul.carousel li:first-child {
+            padding-left: 0;
+          }
+
+          ul.carousel li:last-child {
+            padding-right: 0;
+          }
+      }
 
         ul.carousel li {
           list-style: none;
