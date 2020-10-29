@@ -34,9 +34,9 @@ var scenes = {
       }
     }
   },
-  whaleLeft: {
-    image: 'christ-redeemer-thumbnail.jpg',
-    preview: 'christ-redeemer-thumbnail.jpg',
+  教室: {
+    image: '100_0004.JPG',
+    preview: '100_0004.JPG',
     hotspots: {
       フェニックス広場: {
         pitch: -0.9,
