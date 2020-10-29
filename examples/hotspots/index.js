@@ -68,26 +68,14 @@ function onLoad() {
   });
   vrView.on('ready', onVRViewReady);
   vrView.on('modechange', onModeChange);
+  vrView.on('click', onHotspotClick);
   vrView.on('error', onVRViewError);
   vrView.on('getposition', onGetPosition);
   
   
   }
 
-function onLoad() {
-  vrView = new VRView.Player('#vrview', {
-    image: 'blank.png',
-    preview: 'blank.png',
-    is_stereo: false,
-    is_autopan_off: true
-  });
 
-  vrView.on('ready', onVRViewReady);
-  vrView.on('modechange', onModeChange);
-  vrView.on('click', onHotspotClick);
-  vrView.on('error', onVRViewError);
-  vrView.on('getposition', onGetPosition);
-}
 
 function onVRViewReady(e) {
   console.log('onVRViewReady');
