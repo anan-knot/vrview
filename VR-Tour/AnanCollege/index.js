@@ -23,8 +23,8 @@ var vrView;
 // All the scenes for the experience
 var scenes = {
   フェニックス広場: {
-    image: '100_0011.JPG',
-    preview: '100_0011.JPG',
+    image: 'fenix.jpg',
+    preview: 'fenix-preview.jpg',
     hotspots: {
       教室: {
         pitch: 8.3,
@@ -35,8 +35,8 @@ var scenes = {
     }
   },
   教室: {
-    image: '100_0004.JPG',
-    preview: '100_0004.JPG',
+    image: 'classroom.jpg',
+    preview: 'classroom-preview.jpg',
     hotspots: {
       フェニックス広場: {
         pitch: -0.9,
@@ -156,8 +156,6 @@ function onVRViewReady(e) {
 
   loadScene('フェニックス広場');
 }
-
-
 
 
 
