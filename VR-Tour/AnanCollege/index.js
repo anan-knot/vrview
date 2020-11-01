@@ -64,7 +64,7 @@ function onLoad() {
     height: 480,
     image: 'blank.png',
     is_stereo: true,
-    is_yaw_only: true,
+    is_yaw_only: false,
     is_autopan_off: true
   });
   vrView.on('ready', onVRViewReady);
