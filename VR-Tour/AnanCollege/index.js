@@ -24,7 +24,7 @@ var vrView;
 var scenes = {
   フェニックス広場: {
     image: 'fenix-preview.jpg',
-    preview: 'fenix-preview.jpg',
+    //preview: 'fenix-preview.jpg',
     hotspots: {
       教室: {
         pitch: 8.3,
@@ -36,7 +36,7 @@ var scenes = {
   },
   教室: {
     image: 'classroom-preview.jpg',
-    preview: 'classroom-preview.jpg',
+    //preview: 'classroom-preview.jpg',
     hotspots: {
       フェニックス広場: {
         pitch: -0.9,
