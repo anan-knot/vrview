@@ -65,7 +65,7 @@ function onLoad() {
     image: 'blank.png',
     is_stereo: true,
     is_yaw_only: false,
-    is_autopan_off: true
+    is_autopan_off: false,
   });
   vrView.on('ready', onVRViewReady);
   vrView.on('modechange', onModeChange);
