@@ -46,8 +46,8 @@ var scenes = {
       }
     }
   },
-  ないとー:{
-    image:'100_0018.JPG',
+  Yショップ:{
+    image:'yshop.JPG',
     },
     
 };
